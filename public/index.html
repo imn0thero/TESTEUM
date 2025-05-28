@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TESTEUM Wallet</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🪙 TESTEUM Wallet (TES)</h1>
+    <section>
+      <button id="createWalletBtn">Buat Wallet Baru</button>
+      <p><strong>Public Key:</strong> <span id="publicKey"></span></p>
+      <p><strong>Private Key:</strong> <span id="privateKey"></span></p>
+      <p><strong>Saldo TES:</strong> <span id="balance">0</span></p>
+    </section>
+
+    <section>
+      <h2>Mining</h2>
+      <button id="mineBtn" disabled>Mining TES Reward</button>
+      <p id="miningStatus"></p>
+    </section>
+
+    <section>
+      <h2>Kirim TES</h2>
+      <form id="sendForm">
+        <label for="toAddress">Alamat Tujuan:</label><br />
+        <input type="text" id="toAddress" required /><br />
+        <label for="amount">Jumlah TES:</label><br />
+        <input type="number" id="amount" min="1" required /><br /><br />
+        <button type="submit" disabled>Kirim TES</button>
+      </form>
+      <p id="sendStatus"></p>
+    </section>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/elliptic@6.5.4/dist/elliptic.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
